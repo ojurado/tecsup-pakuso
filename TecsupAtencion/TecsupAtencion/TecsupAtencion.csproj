@@ -141,6 +141,10 @@
     <Resource Include="Images\menuImgCursosProgramacionExtension.png" />
     <Resource Include="Images\menuImgInvestigacionAplicada.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Derecha.jpg" />
+    <Resource Include="Images\Izquierda.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
