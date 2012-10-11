@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecsupAtencion", "TecsupAtencion\TecsupAtencion.csproj", "{A279383F-42E2-49EB-865D-C7B0438157D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Samples.Kinect.WpfViewers", "Dependencias\Microsoft.Samples.Kinect.WpfViewers\Microsoft.Samples.Kinect.WpfViewers.csproj", "{147A6159-58F3-4C98-AAFF-F9F217F28C73}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A279383F-42E2-49EB-865D-C7B0438157D2}.Debug|x86.ActiveCfg = Debug|x86
+		{A279383F-42E2-49EB-865D-C7B0438157D2}.Debug|x86.Build.0 = Debug|x86
+		{A279383F-42E2-49EB-865D-C7B0438157D2}.Release|x86.ActiveCfg = Release|x86
+		{A279383F-42E2-49EB-865D-C7B0438157D2}.Release|x86.Build.0 = Release|x86
+		{147A6159-58F3-4C98-AAFF-F9F217F28C73}.Debug|x86.ActiveCfg = Debug|x86
+		{147A6159-58F3-4C98-AAFF-F9F217F28C73}.Debug|x86.Build.0 = Debug|x86
+		{147A6159-58F3-4C98-AAFF-F9F217F28C73}.Release|x86.ActiveCfg = Release|x86
+		{147A6159-58F3-4C98-AAFF-F9F217F28C73}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
