@@ -30,7 +30,7 @@ namespace TecsupAtencion
     /// </summary>
     public partial class MainMenu : UserControl, ISwitchable
     {
-        public string txtHb = "menu";
+        public string strtunghb = "menu";
         private static double _topBoundary;
         private static double _bottomBoundary;
         private static double _leftBoundary;
@@ -71,11 +71,7 @@ namespace TecsupAtencion
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           
-            this.cpeImgVozTelefoniaIp.Visibility = Visibility.Hidden;
-            this.cpeTxtTelefoniaIpAsterisk.Visibility = Visibility.Hidden;
-            this.cpeTxtComunicacionesInalambricas.Visibility = Visibility.Hidden;
-            this.cpeTxtAdministracionLinux.Visibility = Visibility.Hidden;
+            this.cpe.Visibility = Visibility.Hidden;
 
             kinectSensorChooser1.KinectSensorChanged += new DependencyPropertyChangedEventHandler(kinectSensorChooser1_KinectSensorChanged);
             
@@ -90,22 +86,17 @@ namespace TecsupAtencion
 
         void menuHbCursosProgramacionExtension_Click(object sender, RoutedEventArgs e)
         {
-            txtHb = "cpe";
-
-            menuImgCarrerasProfesionales.Visibility = Visibility.Hidden;
-            menuImgContactenos.Visibility = Visibility.Hidden;
-            menuImgCursosProgramacionExtension.Visibility = Visibility.Hidden;
-            menuImgInvestigacionAplicada.Visibility = Visibility.Hidden;
-            cpeTxtAdministracionLinux.Visibility = Visibility.Visible;
-            cpeTxtComunicacionesInalambricas.Visibility = Visibility.Visible;
-            cpeTxtTelefoniaIpAsterisk.Visibility = Visibility.Visible;
-            cpeImgVozTelefoniaIp.Visibility = Visibility.Visible;
-
+            this.strtunghb = "cpe";
+            this.cpe.Visibility = Visibility.Visible;
+            this.cpe.IsEnabled = true;
+            this.menu.Visibility = Visibility.Hidden;
+            this.menu.IsEnabled = false;
         }
 
         void menuHbCarrerasProfesionales_Click(object sender, RoutedEventArgs e)
         {
-
+            
+            
         }
 
         void menuHbConsultoriaInvestigacionAplicada_Click(object sender, RoutedEventArgs e)
@@ -115,6 +106,7 @@ namespace TecsupAtencion
 
         void menuHbContactenos_Click(object sender, RoutedEventArgs e)
         {
+            
 
         }
         #endregion
@@ -136,7 +128,9 @@ namespace TecsupAtencion
 
         void cpeHbVozTelefoniaIp_click(object sender, RoutedEventArgs e)
         {
-            cpeTxtAdministracionLinux.Text = "jajajjajajajaj";
+            this.strtunghb = "vti";
+            this.cpe.Visibility = Visibility.Hidden;
+            this.vti.Visibility = Visibility.Visible;
         }
         #endregion
 
@@ -255,7 +249,8 @@ namespace TecsupAtencion
                 #region HoverButton convertir en Check
 
                 #region menu HoverButton
-                if (this.txtHb.Equals("menu"))
+               
+                if (strtunghb.Equals("menu"))
                 {
                     CheckButton(menuHbCursosProgramacionExtension, RightHand);
                     CheckButton(menuHbCarrerasProfesionales, RightHand);
@@ -265,7 +260,7 @@ namespace TecsupAtencion
                 #endregion
 
                 #region cpe HoverButton
-                if (this.txtHb.Equals("cpe"))
+                if (strtunghb.Equals("cpe"))
                 {
                     CheckButton(cpeHbComunicacionesInalambricas, RightHand);
                     CheckButton(cpeHbAdministracionLinux, RightHand);

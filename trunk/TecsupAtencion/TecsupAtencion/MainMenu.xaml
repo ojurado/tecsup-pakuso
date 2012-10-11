@@ -13,7 +13,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Name="cabezera">
           
             <Image HorizontalAlignment="Left" Stretch="None"  Source="Images/logoKinectPakuso.png"/>
                <Image HorizontalAlignment="Center" Stretch="None"  Source="/TecsupAtencion;component/Images/mixmatch.png" />
@@ -27,18 +27,14 @@
                 </LinearGradientBrush>
             </Grid.Background>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Name="cuerpo">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             
-            <Grid Grid.Column="0">
-                
-            </Grid>
-            
-            <Grid Grid.Column="1">
+      
+            <Grid Grid.Column="0" x:Name="menu">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -47,51 +43,102 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
-                <Grid Grid.Row="0">
+                    <Grid Grid.Row="0">
 
                     <Image Height="120" Width="400"  Name="menuImgCursosProgramacionExtension"  Stretch="Fill"  VerticalAlignment="Center" Source="Images/menuImgCursosProgramacionExtension.png" />
                     <Controls:HoverButton Height="120" ImageSize="78" Name="menuHbCursosProgramacionExtension" TimeInterval="1000" Width="400" VerticalAlignment="Center"/>
 
-                    <Image  Name="cpeImgVozTelefoniaIp"  VerticalAlignment="Center" Stretch="None" Source="Images/hand.png"  />
-                    <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbVozTelefoniaIp" TimeInterval="1000" Width="400" VerticalAlignment="Center"/>
-
                 </Grid>
                 
-                <Grid Grid.Row="1">
+                    <Grid Grid.Row="1">
 
                     <Image Stretch="Fill"  Height="120" Name="menuImgCarrerasProfesionales" Width="400" VerticalAlignment="Center" Source="Images/menuImgCarrerasProfesionales.png" />
                     <Controls:HoverButton Height="120" ImageSize="78" Name="menuHbCarrerasProfesionales" TimeInterval="1000" Width="400" VerticalAlignment="Center"/>
 
-                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeTxtTelefoniaIpAsterisk" Text="Telefonía IP con Asterisk" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center"   />
-                    <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbTelefoniaIpAsterisk" TimeInterval="1000" Width="400" VerticalAlignment="Center"  />
-                
                 </Grid>
                 
-                <Grid Grid.Row="2">
+                    <Grid Grid.Row="2">
 
                     <Image Stretch="Fill"  Height="120" Name="menuImgInvestigacionAplicada" Width="400"  VerticalAlignment="Center" Source="Images/menuImgInvestigacionAplicada.png"/>
                     <Controls:HoverButton Height="120" ImageSize="78" Name="menuHbConsultoriaInvestigacionAplicada" TimeInterval="1000" Width="400" VerticalAlignment="Center" />
 
-                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeTxtAdministracionLinux" Text="Administración de Linux" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" />
+                </Grid>
+
+                    <Grid Grid.Row="3">
+
+                    <Image Stretch="Fill" Height="120" Name="menuImgContactenos"  Width="400" VerticalAlignment="Center"  Source="Images/menuImgContactenos.png" />
+                    <Controls:HoverButton Height="120" ImageSize="78" Name="menuHbContactenos" TimeInterval="1000" Width="400" VerticalAlignment="Center" />
+
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Column="0" x:Name="cpe">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+           
+                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeImgVozTelefoniaIp" Text="Voz y Telefonia IP" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center"   />
+                    <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbVozTelefoniaIp" TimeInterval="1000" Width="400" VerticalAlignment="Center"/>
+
+                </Grid>
+
+                <Grid Grid.Row="1">
+
+                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeImgTelefoniaIpAsterisk" Text="Telefonía IP con Asterisk" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center"   />
+                    <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbTelefoniaIpAsterisk" TimeInterval="1000" Width="400" VerticalAlignment="Center"  />
+
+                </Grid>
+
+                <Grid Grid.Row="2">
+
+                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeImgAdministracionLinux" Text="Administración de Linux" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" />
                     <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbAdministracionLinux" TimeInterval="1000" Width="400" VerticalAlignment="Center" Loaded="cpeHbAdministracionLinux_Loaded" />
 
                 </Grid>
 
                 <Grid Grid.Row="3">
 
-                    <Image Stretch="Fill" Height="120" Name="menuImgContactenos"  Width="400" VerticalAlignment="Center"  Source="Images/menuImgContactenos.png" />
-                    <Controls:HoverButton Height="120" ImageSize="78" Name="menuHbContactenos" TimeInterval="1000" Width="400" VerticalAlignment="Center" />
 
-                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeTxtComunicacionesInalambricas" Text="Comunicaciones Inalámbricas" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center"   />
+                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeImgComunicacionesInalambricas" Text="Comunicaciones Inalámbricas" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center"   />
                     <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbComunicacionesInalambricas" TimeInterval="1000" Width="400" VerticalAlignment="Center"/>
 
                 </Grid>
 
             </Grid>
+
+            <Grid Grid.Column="0" x:Name="vti">
+                   
+               
+
+            </Grid>
             
-            <Grid Grid.Column="2">
-                <my:KinectColorViewer Name="kinectColorViewer1" VerticalAlignment="Bottom" Height="189" />
-                <my:KinectSensorChooser Name="kinectSensorChooser1" Margin="0,-2,21,0" VerticalAlignment="Bottom" />
+            <Grid Grid.Column="1" Name="cuerpoDerecho">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                    <Grid Grid.Row="0">
+                        <my:KinectColorViewer Name="kinectColorViewer1"  VerticalAlignment="Center" Height="490" Margin="0,-46,10,0" />
+                        <my:KinectSensorChooser Name="kinectSensorChooser1"  VerticalAlignment="Center" />
+                    </Grid>
+                <Grid Grid.Row="1">
+                    
+                </Grid>
+                <Grid Grid.Row="2">
+
+                </Grid>
+                <Grid Grid.Row="3">
+
+                </Grid>
 
 
             </Grid>
@@ -104,7 +151,7 @@
                     </Ellipse.Fill>
                 </Ellipse>
             </Canvas>
-            <Canvas Background="Transparent" Height="823" VerticalAlignment="Top" Margin="0,-2,0,0">
+            <Canvas Background="Transparent" Height="885" VerticalAlignment="Top" >
                 <Ellipse Height="71" Width="73" Name="LeftHand" Canvas.Left="44" Canvas.Top="210">
                     <Ellipse.Fill>
                         <ImageBrush ImageSource="/TecsupAtencion;component/Images/arrow.png" />
@@ -113,7 +160,7 @@
             </Canvas>
         </Grid>
         
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Name="pie">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="851*" />
                 <ColumnDefinition Width="549*" />
