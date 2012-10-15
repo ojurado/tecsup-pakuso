@@ -129,10 +129,16 @@
                         <my:KinectColorViewer Name="kinectColorViewer1"  VerticalAlignment="Center" Height="490" Margin="0,-46,10,0" />
                         <my:KinectSensorChooser Name="kinectSensorChooser1"  VerticalAlignment="Center" />
                     </Grid>
-                <Grid Grid.Row="1">
-                    
+                <Grid Grid.Row="1" x:Name="flechaIzquierda">
+
+                    <Image Stretch="Fill" Height="120" Name="flechaImgIzquierda"  Width="400" VerticalAlignment="Center"  Source="Images/Izquierda.jpg" />
+                    <Controls:HoverButton Height="120" ImageSize="78" Name="flechaHbIzquierda" TimeInterval="1000" Width="400" VerticalAlignment="Center"  />
+
                 </Grid>
-                <Grid Grid.Row="2">
+                <Grid Grid.Row="2" x:Name="flechaDerecha">
+
+                    <Image Stretch="Fill" Height="120" Name="flechaImgDerecha"  Width="400" VerticalAlignment="Center"  Source="Images/Derecha.jpg" />
+                    <Controls:HoverButton Height="120" ImageSize="78" Name="flechaHbDerecha" TimeInterval="1000" Width="400" VerticalAlignment="Center"  />
 
                 </Grid>
                 <Grid Grid.Row="3">

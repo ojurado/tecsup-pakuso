@@ -30,7 +30,8 @@ namespace TecsupAtencion
     /// </summary>
     public partial class MainMenu : UserControl, ISwitchable
     {
-        public string strtunghb = "menu";
+        public string stringhb = "menu";
+        public Boolean flecha = false;
         private static double _topBoundary;
         private static double _bottomBoundary;
         private static double _leftBoundary;
@@ -61,6 +62,13 @@ namespace TecsupAtencion
             cpeHbVozTelefoniaIp.Click += new RoutedEventHandler(cpeHbVozTelefoniaIp_click);
             #endregion
 
+            #region flecha HoverButton
+
+            flechaHbIzquierda.Click += new RoutedEventHandler(flechaHbIzquierda_click);
+            flechaHbDerecha.Click += new RoutedEventHandler(flechaHbIzquierda_click);
+
+            #endregion
+
             #endregion
         }
 
@@ -72,6 +80,8 @@ namespace TecsupAtencion
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.cpe.Visibility = Visibility.Hidden;
+            this.flechaDerecha.Visibility = Visibility.Hidden;
+            this.flechaIzquierda.Visibility = Visibility.Hidden;
 
             kinectSensorChooser1.KinectSensorChanged += new DependencyPropertyChangedEventHandler(kinectSensorChooser1_KinectSensorChanged);
             
@@ -86,11 +96,12 @@ namespace TecsupAtencion
 
         void menuHbCursosProgramacionExtension_Click(object sender, RoutedEventArgs e)
         {
-            this.strtunghb = "cpe";
+            this.stringhb = "cpe";
             this.cpe.Visibility = Visibility.Visible;
-            this.cpe.IsEnabled = true;
             this.menu.Visibility = Visibility.Hidden;
-            this.menu.IsEnabled = false;
+            this.flecha = true;
+            this.flechaIzquierda.Visibility = Visibility.Visible;
+            this.flechaDerecha.Visibility = Visibility.Visible;
         }
 
         void menuHbCarrerasProfesionales_Click(object sender, RoutedEventArgs e)
@@ -133,6 +144,29 @@ namespace TecsupAtencion
             this.vti.Visibility = Visibility.Visible;
         }
         #endregion
+
+        #region flecha HoverButton
+
+        void flechaHbIzquierda_click(object sender, RoutedEventArgs e)
+        {
+            if (stringhb.Equals("cpe"))
+            {
+                this.stringhb = "menu";
+                this.cpe.Visibility = Visibility.Hidden;
+                this.menu.Visibility = Visibility.Visible;
+                this.flecha = false;
+                this.flechaIzquierda.Visibility = Visibility.Hidden;
+                this.flechaDerecha.Visibility = Visibility.Hidden;
+
+            }
+
+        }
+
+        void flechaHbDerecha_click(object sender, RoutedEventArgs e)
+        {
+        }
+        #endregion
+
 
         #endregion
 
@@ -249,8 +283,8 @@ namespace TecsupAtencion
                 #region HoverButton convertir en Check
 
                 #region menu HoverButton
-               
-                if (strtunghb.Equals("menu"))
+
+                if (stringhb.Equals("menu"))
                 {
                     CheckButton(menuHbCursosProgramacionExtension, RightHand);
                     CheckButton(menuHbCarrerasProfesionales, RightHand);
@@ -260,13 +294,22 @@ namespace TecsupAtencion
                 #endregion
 
                 #region cpe HoverButton
-                if (strtunghb.Equals("cpe"))
+                if (stringhb.Equals("cpe"))
                 {
                     CheckButton(cpeHbComunicacionesInalambricas, RightHand);
                     CheckButton(cpeHbAdministracionLinux, RightHand);
                     CheckButton(cpeHbTelefoniaIpAsterisk, RightHand);
                     CheckButton(cpeHbVozTelefoniaIp, RightHand);
                 }
+                #endregion
+
+                #region flecha HoverButton
+                if (flecha == true)
+                {
+                    CheckButton(flechaHbDerecha, RightHand);
+                    CheckButton(flechaHbIzquierda, RightHand);
+                }
+
                 #endregion
 
                 #endregion
