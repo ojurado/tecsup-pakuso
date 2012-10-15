@@ -36,13 +36,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Coding4Fun.Kinect.WinForm">
+      <HintPath>..\Dependencias\Microsoft.Samples.Kinect.WpfViewers\References\Coding4Fun.Kinect.WinForm.dll</HintPath>
+    </Reference>
     <Reference Include="Coding4Fun.Kinect.Wpf">
-      <HintPath>..\Dependencias\Coding4Fun.Kinect.Wpf.dll</HintPath>
+      <HintPath>..\Dependencias\Microsoft.Samples.Kinect.WpfViewers\References\Coding4Fun.Kinect.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Drawing">
-      <HintPath>..\Dependencias\Microsoft.Expression.Drawing.dll</HintPath>
+      <HintPath>..\Dependencias\Microsoft.Samples.Kinect.WpfViewers\References\Microsoft.Expression.Drawing.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Kinect, Version=1.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Kinect, Version=1.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -144,6 +148,13 @@
   <ItemGroup>
     <Resource Include="Images\Derecha.jpg" />
     <Resource Include="Images\Izquierda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cpeImgAdministracionLinux.png" />
+    <Resource Include="Images\cpeImgTelefoniaIpAsterisk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cpeImgComunicacionesInalambricas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

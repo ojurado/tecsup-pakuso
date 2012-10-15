@@ -83,30 +83,29 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0">
-           
-                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeImgVozTelefoniaIp" Text="Voz y Telefonia IP" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center"   />
+
+                    <Image Stretch="Fill" Height="120" Name="cpeImgVozTelefoniaIp"  Width="400" VerticalAlignment="Center"  Source="Images/cpeImgVozTelefoniaIp.png" />
                     <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbVozTelefoniaIp" TimeInterval="1000" Width="400" VerticalAlignment="Center"/>
 
                 </Grid>
 
                 <Grid Grid.Row="1">
 
-                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeImgTelefoniaIpAsterisk" Text="Telefonía IP con Asterisk" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center"   />
+                    <Image Stretch="Fill" Height="120" Name="cpeImgTelefoniaIpAsterisk"  Width="400" VerticalAlignment="Center"  Source="Images/cpeImgTelefoniaIpAsterisk.png" />
                     <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbTelefoniaIpAsterisk" TimeInterval="1000" Width="400" VerticalAlignment="Center"  />
 
                 </Grid>
 
                 <Grid Grid.Row="2">
 
-                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeImgAdministracionLinux" Text="Administración de Linux" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" />
+                    <Image Stretch="Fill" Height="120" Name="cpeImgAdministracionLinux"  Width="400" VerticalAlignment="Center"  Source="Images/cpeImgAdministracionLinux.png" />
                     <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbAdministracionLinux" TimeInterval="1000" Width="400" VerticalAlignment="Center" Loaded="cpeHbAdministracionLinux_Loaded" />
 
                 </Grid>
 
                 <Grid Grid.Row="3">
 
-
-                    <TextBlock Background="#FFEB9797"  Height="75" Name="cpeImgComunicacionesInalambricas" Text="Comunicaciones Inalámbricas" Width="265" TextAlignment="Center" FontSize="18" VerticalAlignment="Center"   />
+                    <Image Stretch="Fill" Height="120" Name="cpeImgComunicacionesInalambricas"  Width="400" VerticalAlignment="Center"  Source="Images/cpeImgComunicacionesInalambricas.png" />
                     <Controls:HoverButton Height="120" ImageSize="78" Name="cpeHbComunicacionesInalambricas" TimeInterval="1000" Width="400" VerticalAlignment="Center"/>
 
                 </Grid>
