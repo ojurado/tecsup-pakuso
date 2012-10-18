@@ -65,7 +65,6 @@ namespace TecsupAtencion
             #region flecha HoverButton
 
             flechaHbIzquierda.Click += new RoutedEventHandler(flechaHbIzquierda_click);
-            flechaHbDerecha.Click += new RoutedEventHandler(flechaHbIzquierda_click);
 
             #endregion
 
@@ -80,7 +79,6 @@ namespace TecsupAtencion
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.cpe.Visibility = Visibility.Hidden;
-            this.flechaDerecha.Visibility = Visibility.Hidden;
             this.flechaIzquierda.Visibility = Visibility.Hidden;
 
             kinectSensorChooser1.KinectSensorChanged += new DependencyPropertyChangedEventHandler(kinectSensorChooser1_KinectSensorChanged);
@@ -101,7 +99,6 @@ namespace TecsupAtencion
             this.menu.Visibility = Visibility.Hidden;
             this.flecha = true;
             this.flechaIzquierda.Visibility = Visibility.Visible;
-            this.flechaDerecha.Visibility = Visibility.Visible;
         }
 
         void menuHbCarrerasProfesionales_Click(object sender, RoutedEventArgs e)
@@ -139,7 +136,7 @@ namespace TecsupAtencion
 
         void cpeHbVozTelefoniaIp_click(object sender, RoutedEventArgs e)
         {
-            this.strtunghb = "vti";
+            this.stringhb = "vti";
             this.cpe.Visibility = Visibility.Hidden;
             this.vti.Visibility = Visibility.Visible;
         }
@@ -156,15 +153,17 @@ namespace TecsupAtencion
                 this.menu.Visibility = Visibility.Visible;
                 this.flecha = false;
                 this.flechaIzquierda.Visibility = Visibility.Hidden;
-                this.flechaDerecha.Visibility = Visibility.Hidden;
+            }
 
+            if (stringhb.Equals("vti"))
+            {
+                this.stringhb = "cpe";
+                this.vti.Visibility = Visibility.Hidden;
+                this.cpe.Visibility = Visibility.Hidden;
             }
 
         }
 
-        void flechaHbDerecha_click(object sender, RoutedEventArgs e)
-        {
-        }
         #endregion
 
 
@@ -306,7 +305,6 @@ namespace TecsupAtencion
                 #region flecha HoverButton
                 if (flecha == true)
                 {
-                    CheckButton(flechaHbDerecha, RightHand);
                     CheckButton(flechaHbIzquierda, RightHand);
                 }
 
