@@ -1,0 +1,1 @@
+Se realizará un atención al cliente para que cualquier usuario en su hora de espera para su atención, pueda obtener información de la empresa de una forma nueva y dinámica.
